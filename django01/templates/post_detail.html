@@ -3,6 +3,6 @@
 <p>{{post.author}}</p>
 <p>{{post.body}}</p>
 <button type="button">
-  <a href="{% url 'post_update' %}">Update</a>
+  <a href="{% url 'post_update' post.pk  %}">Update</a>
 </button>
 {% endblock content %}

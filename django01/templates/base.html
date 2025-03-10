@@ -12,6 +12,9 @@
       </h1>
       {% if user.is_authenticated %}
       <p>Hush kelibsiz {{ user.username }}</p>
+      <p>
+        <a href="{% url 'logout' %}">Chiqib ketish</a>
+      </p>
       {% else %}
       <a href="{% url 'login' %}">Saytga kirish</a>
       {% endif %}

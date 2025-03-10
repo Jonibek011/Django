@@ -24,7 +24,7 @@ class blogCreateView(CreateView):
 
 class blogUpdateVIew(UpdateView):
     model = Post
-    template_name = 'post_upodate.html'
+    template_name = 'post_update.html'
     fields = ['title', 'body']
 
 class blogDeleteView(DeleteView):

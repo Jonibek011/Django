@@ -5,4 +5,7 @@
 <button type="button">
   <a href="{% url 'post_update' post.pk  %}">Update</a>
 </button>
+<button type="button">
+  <a href="{% url 'post_delete' post.pk  %}">Delete</a>
+</button>
 {% endblock content %}

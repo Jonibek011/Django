@@ -12,8 +12,14 @@
       <h1>
         <a href="{% url 'home' %}">Mining Postlarim</a>
       </h1>
-
-      {% block content %} {% endblock content %}
+      {% if user.is_authenticated %}
+      <p>Hush kelibsiz {{user.username}}!</p>
+      <a href="{% url 'logout' %}">Logout</a>
+      {% else %}
+      <p>
+        <a href="{% url 'login' %}">Ro`yxatdan o`tish</a>
+      </p>
+      {% endif %} {% block content %} {% endblock content %}
     </header>
 
     <h1>

@@ -14,11 +14,15 @@
       </h1>
       {% if user.is_authenticated %}
       <p>Hush kelibsiz {{user.username}}!</p>
-      <a href="{% url 'logout' %}">Logout</a>
+      <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button>Logout</button>
+      </form>
       {% else %}
       <p>
-        <a href="{% url 'login' %}">Ro`yxatdan o`tish</a>
+        <a href="{% url 'login' %}">Saytga kirish</a>
       </p>
+      <a href="{% url 'signup' %}">Ro'yxatdan o'tish</a>
       {% endif %} {% block content %} {% endblock content %}
     </header>
 

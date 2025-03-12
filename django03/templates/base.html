@@ -12,6 +12,17 @@
       <h2>
         <a href="{% url 'home' %}"> Mening postlarim </a>
       </h2>
+      {% if user.is_authenticated %}
+      <p>Hush kelibsiz {{user.username}}!</p>
+      <form method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button type="submit">Chiqish</button>
+      </form>
+      {% else %}
+      <p>
+        <a href="{% url 'login' %}">Saytga kirish</a>
+      </p>
+      {% endif %}
     </header>
 
     {% block content %} {% endblock content %}

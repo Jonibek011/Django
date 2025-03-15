@@ -1,8 +1,9 @@
 {% extends 'base.html' %} {% block content %} {% if user.is_authenticated %}
 <h1>{{user.username | title }}</h1>
-<p>
-  <a href="{% url 'logout' %}">Chiqish</a>
-</p>
+<form action="{% url 'logout' %}" method="post">
+  {% csrf_token %}
+  <button type="submit">Log Out</button>
+</form>
 {% else %}
 <p>Siz ro`yxatdan o`tmagansiz</p>
 <p>

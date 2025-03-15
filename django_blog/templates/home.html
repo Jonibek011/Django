@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block content %} {% if user.is_authenticated %}
+<h1>{{user.username | title }}</h1>
+<p>
+  <a href="{% url 'logout' %}">Chiqish</a>
+</p>
+{% else %}
+<p>Siz ro`yxatdan o`tmagansiz</p>
+<p>
+  <a href="{% url 'login' %}">Kirish</a>
+  <a href="{% url 'signup' %}">Ro`yxatdan o`tish</a>
+</p>
+{% endif %} {% endblock content %}

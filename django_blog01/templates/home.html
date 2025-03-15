@@ -1,0 +1,13 @@
+{% extends 'base.html' %} {% block content %}
+<h2>Asosiy sahifa</h2>
+{% if user.is_authenticated %}
+<h1>{{user.username}}</h1>
+<p>saytga hush kelibsiz!</p>
+<a href="{% url 'logout' %}">Log Out</a>
+{% else %}
+<h2>Siz ro'yxatdan o'tmagansiz</h2>
+<p>
+  <a href="{% url 'login' %}">Log In</a>
+  <a href="{% url 'signup' %}">Sign Up</a>
+</p>
+{% endif %} {% endblock content %}

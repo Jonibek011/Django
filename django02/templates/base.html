@@ -13,7 +13,7 @@
         <a href="{% url 'home' %}">Mining Postlarim</a>
       </h1>
       {% if user.is_authenticated %}
-      <p>Hush kelibsiz {{user.username}}!</p>
+      <p>Hush kelibsiz {{user.username | title}}!</p>
       <form action="{% url 'logout' %}" method="post">
         {% csrf_token %}
         <button>Logout</button>

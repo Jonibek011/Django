@@ -1,9 +1,12 @@
 {% extends 'base.html' %} {% block content %}
 <h2>Asosiy sahifa</h2>
 {% if user.is_authenticated %}
-<h1>{{user.username}}</h1>
+<h1>{{user.username | title}}</h1>
 <p>saytga hush kelibsiz!</p>
-<a href="{% url 'logout' %}">Log Out</a>
+<form action="{% url 'logout' %}" method="post">
+  {% csrf_token %}
+  <button>Logout</button>
+</form>
 {% else %}
 <h2>Siz ro'yxatdan o'tmagansiz</h2>
 <p>

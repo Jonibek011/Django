@@ -1,0 +1,17 @@
+{% extends 'base.html ' %} {% block content %}
+<h1>Bosh sahifa</h1>
+<hr />
+{% if user.is_authenticated %}
+<h1>{{user.username | capfirst }}</h1>
+<br />
+<form action="{% url 'logout' %} " method="post">
+  {% csrf_token %}
+  <button>Log Out</button>
+</form>
+{% else %}
+<h2>Siz ro'yxatdan o'tmagansiz</h2>
+<p>
+  <a href="{% url 'login' %}">Log In</a>
+  <a href="{% url 'signup' %}">Sign Up</a>
+</p>
+{% endif %} {% endblock content %}

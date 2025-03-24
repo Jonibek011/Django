@@ -1,7 +1,22 @@
 {% extends 'base.html' %} {% block content %}
 <h2>Saytga kirish</h2>
 <form method="post">
-  {% csrf_token %} {{form.as_p}}
-  <button type="submit">Kirish</button>
+  {% csrf_token %}
+
+  <div class="mb-3">
+    <label for="{{ form.username.id_for_label }}" class="form-label"
+      >Username</label
+    >
+    {{ form.username }}
+  </div>
+
+  <div class="mb-3">
+    <label for="{{ form.password.id_for_label }}" class="form-label"
+      >Password</label
+    >
+    {{ form.password }}
+  </div>
+
+  <button type="submit" class="btn btn-primary">Kirish</button>
 </form>
 {% endblock content %}

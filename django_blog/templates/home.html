@@ -1,9 +1,15 @@
-{% extends 'base.html' %} {% block content %} {% if user.is_authenticated %}
-<h1>{{user.username | title }}</h1>
-<form action="{% url 'logout' %}" method="post">
-  {% csrf_token %}
-  <button type="submit">Log Out</button>
-</form>
+{% extends 'base.html' %} {% block content %}
+<h1>Asosiy sahifa</h1>
+{% if user.is_authenticated %}
+<div class="w-100 text-center">
+  <h1>Wellcome {{user.username | title}}</h1>
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates porro
+    nisi perspiciatis voluptas laborum soluta quisquam labore ex eius
+    praesentium odio aperiam nulla quos perferendis possimus, in unde officiis!
+    Provident.
+  </p>
+</div>
 {% else %}
 <p>Siz ro`yxatdan o`tmagansiz</p>
 <p>

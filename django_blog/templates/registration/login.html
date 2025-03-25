@@ -1,10 +1,10 @@
-{% extends 'base.html' %} {% load crispy_forms_tags %} {% block content %}
+{% extends 'base.html' %} {% block content %}
 <div
   class="w-100 h-100vh border d-flex flex-column gap-5 justify-content-center align-items-center"
 >
   <h2>Saytga kirish</h2>
   <form method="post">
-    {% csrf_token %} {{form|crispy}}
+    {% csrf_token %} {{form.as_p}}
     <button type="submit">Submit</button>
   </form>
 </div>

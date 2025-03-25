@@ -14,8 +14,8 @@
   <body>
     <header>
       <nav class="navbar bg-dark container-fluid">
-        <div class="container-fluid">
-          <a class="navbar-brand text-white">Navbar</a>
+        <div class="mx-5 w-100 d-flex justify-content-between">
+          <a href="{% url 'home' %}" class="navbar-brand text-white">Navbar</a>
 
           {% if user.is_authenticated %}
           <div class="dropdown-center me-5">

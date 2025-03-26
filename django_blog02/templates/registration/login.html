@@ -3,5 +3,11 @@
 <form action="" method="post">
   {% csrf_token %} {{form.as_p}}
   <button>Login</button>
+  <a
+    href="{% url 'password_reset' %}"
+    class="btn btn-outline-danger"
+    role="button"
+    >Reset password</a
+  >
 </form>
 {% endblock content %}

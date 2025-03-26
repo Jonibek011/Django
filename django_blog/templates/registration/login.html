@@ -5,7 +5,13 @@
   <h2>Saytga kirish</h2>
   <form method="post">
     {% csrf_token %} {{form.as_p}}
-    <button type="submit">Submit</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a
+      href="{% url 'password_reset' %}"
+      role="button"
+      class="btn btn-outline-danger"
+      >Forgot password?</a
+    >
   </form>
 </div>
 {% endblock content %}

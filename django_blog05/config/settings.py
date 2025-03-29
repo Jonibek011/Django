@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accounts',
+    'pages',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +129,6 @@ AUTH_USER_MODEL = 'accounts.CustomModel'
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

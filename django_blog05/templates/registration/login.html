@@ -2,6 +2,12 @@
 <h2>Saytga kirish</h2>
 <form action="" method="post">
   {% csrf_token %} {{form.as_p}}
-  <button>Submit</button>
+  <button class="btn btn-primary">Submit</button>
+  <a
+    href="{% url 'password_reset' %}"
+    class="btn btn-outline-primary"
+    role="button"
+    >Reset password</a
+  >
 </form>
 {% endblock content %}

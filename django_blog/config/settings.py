@@ -37,12 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'crispy_forms',
-   
+     "crispy_forms",
+    "crispy_bootstrap5",
     'accounts',
     'pages',
 ]
 
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -139,5 +141,5 @@ LOGOUT_REDIRECT_URL = 'home'
 
 
 
-CRISPY_TEMPLATE_PACK = "bootstrap4"
+
 

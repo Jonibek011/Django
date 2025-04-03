@@ -3,6 +3,7 @@
 {% if user.is_authenticated %}
 <h1>{{user.username | title}}</h1>
 <p>saytga hush kelibsiz!</p>
+<a href="{% url 'article_list' %}">articles</a>
 <form action="{% url 'logout' %}" method="post">
   {% csrf_token %}
   <button>Logout</button>

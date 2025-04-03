@@ -28,6 +28,16 @@
               </h2>
 
               <p class="leading-relaxed mb-3">{{article.body}}</p>
+              <div>
+                <a
+                  class="border-r-2 border-gray-200 px-2"
+                  href="{% url 'article_update' article.pk %}"
+                  >Update</a
+                >
+                <a class="px-2" href="{% url 'article_delete' article.pk %}"
+                  >Delete</a
+                >
+              </div>
               <div class="flex items-center flex-wrap">
                 <span class="text-gray-400 mr-4"
                   >Author: {{object.author|title}}</span

@@ -1,0 +1,13 @@
+{% extends 'base.html' %} {% block content %}
+<form action="" method="post">
+  {% csrf_token %}
+  <h2>Are you sure to delete post named "{{object.title}}"?</h2>
+  <button class="btn btn-danger">Yes</button>
+  <a
+    href="{% url 'article_detail' article.pk %}"
+    role="button"
+    class="btn btn-outline-danger"
+    >Back</a
+  >
+</form>
+{% endblock content %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% block content %}
+<div class="w-50 mx-auto">
+  <h2>Delete Post</h2>
+  <form action="" method="post">
+    {% csrf_token %}
+    <h3>Are you sere to delete named "{{object.title}}"</h3>
+    <button class="btn btn-danger">Sure</button>
+  </form>
+</div>
+{% endblock content %}

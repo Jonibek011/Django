@@ -4,6 +4,7 @@
 <h1>{{user.username | title}}</h1>
 <p>saytga hush kelibsiz!</p>
 <a href="{% url 'article_list' %}">articles</a>
+<a href="{% url 'article_new' %}">New post</a>
 <form action="{% url 'logout' %}" method="post">
   {% csrf_token %}
   <button>Logout</button>

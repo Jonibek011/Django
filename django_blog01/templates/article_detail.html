@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% block content %}
+<div class="lg:w-50 w-75 mx-auto">
+  <div class="card" style="width: 100%">
+    {% if object.photo %}
+    <img src="{{object.photo.url}}" class="card-img-top" alt="..." />
+    {% endif %}
+
+    <div class="card-body">
+      <h5 class="card-title">{{object.title}}</h5>
+      <p class="card-text">{{object.summary}}</p>
+      <p>{{object.body}}</p>
+      <a href="{% url 'article_update' article.pk %}" class="btn btn-primary"
+        >Update</a
+      >
+      <a href="{% url 'article_delete' article.pk %}" class="btn btn-primary"
+        >Delete</a
+      >
+      <a href="{% url 'article_list' %}" class="btn btn-primary">Articles</a>
+      <div
+        class="d-flex flex-row gap-5 text-muted justify-content-between mt-4 fs-sm"
+      >
+        <p>Author: {{object.author|title}}</p>
+        <p>{{object.date}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

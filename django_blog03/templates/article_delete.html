@@ -1,0 +1,8 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Delete section</h1>
+<form action="" method="post">
+  {% csrf_token %}
+  <h2>Siz "{{object.title}}" nomli postni o'chirishni istaysizmi?</h2>
+  <button>Delete</button>
+</form>
+{% endblock content %}

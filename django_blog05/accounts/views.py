@@ -7,4 +7,4 @@ from django.urls import reverse_lazy
 class SignUpView(CreateView):
     form_class = CustomUserCreation
     success_url = reverse_lazy('home') 
-    template_name = 'registrasion/signup.html'
+    template_name = 'registration/signup.html'
